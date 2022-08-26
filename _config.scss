@@ -1,0 +1,27 @@
+$primary-color:hsl(0, 0, 100);
+$secondary-color: rgb(0, 255, 162);
+
+$bodybgcolor:hsl(0,0,87);
+
+$btn-color:#ffffff;
+$btn-ho-color:#7f7f7f;
+$btn-ho-bgcolor:#53a7f0;
+
+$inpt_btn_boxsha:#9c8a79;
+$disply-color:rgb(36, 36, 44);
+
+
+/*set Text-color*/
+@function set-text-color($color){
+    @if(lightness($color)>70){
+        @return rgb(24, 21, 19);
+    }@else{
+        @return rgb(57, 49, 216);
+    }
+}
+
+/*set calculator background-color*/
+@mixin set-background($color){
+    background-color: $color;
+    color:set-text-color($color); /*အပေါက function ကိုလှမ်းခေါသုံးခြင်း*/
+}
